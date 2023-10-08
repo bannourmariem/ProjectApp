@@ -1,3 +1,7 @@
 controllers:
     resource: ../src/Controller/
     type: attribute
+author_show:
+    path: /authors/{name}
+    controller: App\Controller\AuthorController::showAuthor
+
