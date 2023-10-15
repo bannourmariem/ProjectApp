@@ -8,23 +8,19 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ServiceController extends AbstractController
 {
-    /**
-     * @Route("/service", name="app_service")
-     */
+    #[Route('/author', name: 'app_service')]
     public function index(): Response
     {
 
-        return $this->render('service/index.html.twig', [
+        return $this->render('service/show.html.twig', [
             'controller_name' => 'ServiceController',
          ]);
     }
 
-    /**
-     * @Route("/service/{user}", name="app_service")
-     */
+    #[Route('/author', name: 'app_service')]
     public function show(): Response
     {
-        $user = 'Chourabi';
+        $user = 'mariem';
         return $this->render('service/index.html.twig', [
             'controller_name' => 'ServiceController',
             'user'=>$user 

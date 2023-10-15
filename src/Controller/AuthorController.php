@@ -8,9 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AuthorController extends AbstractController
 {
-    /**
-     * @Route("/author", name="app_author")
-     */
+    #[Route('/author', name: 'app_author')]
     public function index(): Response
     {
         $authors = array(
